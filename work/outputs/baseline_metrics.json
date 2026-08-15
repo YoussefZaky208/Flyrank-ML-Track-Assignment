@@ -1,0 +1,13 @@
+{
+  "rule": "stale (days_since_last_update>=180) AND visible (impressions_90d>=500), score = impressions_90d",
+  "reason_code": "stale_visible_page",
+  "action_label": "review_for_refresh",
+  "n_flagged": 17,
+  "n_clients_flagged": 4,
+  "n_total_rows": 30000,
+  "base_rate_proxy_label": 0.5421,
+  "precision_at_10": 1.0,
+  "precision_at_all_flagged": 0.9412,
+  "signal_1_verdict": "MIXED",
+  "signal_2_verdict": "CONFIRMED"
+}
