@@ -1,0 +1,70 @@
+{
+  "lane": "Refresh / Content Opportunity Scoring",
+  "feature_month": "2026-03",
+  "label_month": "2026-04",
+  "k": 50,
+  "base_rate": 0.1361,
+  "n_matched_content_items": 331436,
+  "n_march_only_dropped": 1,
+  "results_table": [
+    {
+      "split": "naive_random_split",
+      "method": "baseline_rule (W4)",
+      "precision_at_k": 0.14,
+      "roc_auc": 0.5,
+      "base_rate": 0.136
+    },
+    {
+      "split": "naive_random_split",
+      "method": "logistic_regression",
+      "precision_at_k": 0.74,
+      "roc_auc": 0.901,
+      "base_rate": 0.136
+    },
+    {
+      "split": "naive_random_split",
+      "method": "random_forest",
+      "precision_at_k": 0.98,
+      "roc_auc": 0.973,
+      "base_rate": 0.136
+    },
+    {
+      "split": "grouped_by_client_split",
+      "method": "baseline_rule (W4)",
+      "precision_at_k": 0.16,
+      "roc_auc": 0.5,
+      "base_rate": 0.136
+    },
+    {
+      "split": "grouped_by_client_split",
+      "method": "logistic_regression",
+      "precision_at_k": 0.5,
+      "roc_auc": 0.853,
+      "base_rate": 0.136
+    },
+    {
+      "split": "grouped_by_client_split",
+      "method": "random_forest",
+      "precision_at_k": 0.98,
+      "roc_auc": 0.961,
+      "base_rate": 0.136
+    }
+  ],
+  "top_features_by_permutation_importance": [
+    "days_with_clicks",
+    "impressions_month",
+    "content_age_days",
+    "word_count",
+    "avg_position_month"
+  ],
+  "action_distribution": {
+    "monitor": 173338,
+    "protect": 98806,
+    "refresh": 51646,
+    "expand": 7489,
+    "prune": 157
+  },
+  "sealed_month_touched": false,
+  "client_overlap_grouped_split": 0,
+  "client_overlap_random_split": 55
+}
